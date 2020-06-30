@@ -1,5 +1,5 @@
 # System Monitor
-Alternative to [htop](https://github.com/hishamhm/htop) command-line application
+Alternative to [htop](https://github.com/hishamhm/htop) command-line application for Linux distributives
 
 ## ncurses
 [ncurses](https://www.gnu.org/software/ncurses/) is a library that facilitates text-based graphical output in the terminal. This project relies on ncurses for display output.
