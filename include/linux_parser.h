@@ -6,6 +6,7 @@
 #include <string>
 
 namespace LinuxParser {
+
 // Paths
 const std::string kProcDirectory{"/proc/"};
 const std::string kCmdlineFilename{"/cmdline"};
@@ -18,8 +19,57 @@ const std::string kVersionFilename{"/version"};
 const std::string kOSPath{"/etc/os-release"};
 const std::string kPasswordPath{"/etc/passwd"};
 
+// Filters
+const std::string kFilterProcesses("processes");
+const std::string kFilterRunningProcesses("procs_running");
+const std::string kFilterMemTotal("MemTotal:");
+const std::string kFilterMemFree("MemFree:");
+const std::string kFilterCpu("cpu");
+const std::string kFilterUID("Uid:");
+const std::string kFilterProcMem("VmData:");
+const std::string kFilterPrettyName("PRETTY_NAME");
+const char kFilterWhiteSpace(' ');
+const char kFilterUnderScore('_');
+const char kFilterEquals('=');
+const char kFilterDoubleQuotes('"');
+const char kFilterColumn(':');
+
 // Helpers
-std::string ScanValue(std::ifstream &stream, std::string target);
+template <typename T>
+T findValueByKey(std::string const& keyFilter, std::string const& fileName) {
+  T value;
+  std::string line;
+  std::string key;
+
+  std::ifstream stream(kProcDirectory + fileName);
+  if (stream.is_open()) {
+    while (getline(stream, line)) {
+      std::stringstream linestream(line);
+      while (linestream >> key >> value) {
+        if (key == keyFilter) {
+          stream.close();
+          return value;
+        }
+      }
+    }
+  }
+  return value;
+}
+
+template <typename T>
+T getFileContent(std::string const& filename) {
+  std::string line;
+  T value;
+
+  std::ifstream stream(kProcDirectory + filename);
+  if (stream.is_open()) {
+    getline(stream, line);
+    std::stringstream linestream(line);
+    linestream >> value;
+  }
+  stream.close();
+  return value;
+};
 
 // System
 float MemoryUtilization();
@@ -43,17 +93,13 @@ enum CPUStates {
   kGuest_ = 8,
   kGuestNice_ = 9
 };
-std::vector<float> CpuUtilization(int id);
-long Jiffies();
-long ActiveJiffies();
-long ActiveJiffies(int pid);
-long IdleJiffies();
+std::vector<double> CpuUtilization(int id);
 
 // Processes
 std::string Command(int pid);
 std::string Ram(int pid);
 std::string User(int pid);
-long int UpTime(int pid);
+long UpTime(int pid);
 std::vector<long> ProcessCpuUtilization(int id);
 };  // namespace LinuxParser
 
