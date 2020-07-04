@@ -11,10 +11,6 @@
 #include "process.h"
 #include "processor.h"
 
-using std::size_t;
-using std::string;
-using std::vector;
-
 System::System() {
   for (int id = 0; id < sysconf(_SC_NPROCESSORS_ONLN); id++) {
     cpu_cores_.emplace_back(Processor(id));
