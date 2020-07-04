@@ -4,12 +4,12 @@
 class Processor {
  public:
   Processor(int id);
-  float Utilization();
+  double Utilization();
 
  private:
   int id_;
-  float prev_idle_ = 0;
-  float prev_non_idle_ = 0;
+  double prev_idle_ = 0;
+  double prev_non_idle_ = 0;
 };
 
 #endif
