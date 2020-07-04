@@ -22,3 +22,7 @@ debug:
 .PHONY: clean
 clean:
 	rm -rf build
+
+.PONY: run
+run:
+	./build/monitor
