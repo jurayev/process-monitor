@@ -109,6 +109,8 @@ void NCursesDisplay::Display(System& system, int n) {
     init_pair(1, COLOR_CYAN, COLOR_BLACK);
     init_pair(2, COLOR_GREEN, COLOR_BLACK);
     init_pair(3, COLOR_YELLOW, COLOR_BLACK);
+    wclear(system_window);
+    wclear(process_window);
     box(system_window, 0, 0);
     box(process_window, 0, 0);
     DisplaySystem(system, system_window);
