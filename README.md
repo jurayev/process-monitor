@@ -54,4 +54,4 @@ This project uses [Make](https://www.gnu.org/software/make/). The Makefile has f
 
 ## License
 
-[MIT](https://github.com/jurayev/system-monitor/LICENCE.md)
+[The content of this repository is licensed under a MIT License.](https://github.com/jurayev/system-monitor/blob/master/LICENSE.md)
