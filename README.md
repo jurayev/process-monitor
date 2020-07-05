@@ -1,6 +1,22 @@
 # System Monitor
 Alternative to [htop](https://github.com/hishamhm/htop) command-line application process viewer for Linux distributives
 
+*Ubuntu 18 with 4 CPU cores*
+
+<img src="images/system-monitor-u18-4cores.PNG" width="75%" height="75%">
+
+*Ubuntu 16 with 2 CPU cores*
+
+<img src="images/system-monitor-u16-2cores.PNG" width="75%" height="75%">
+
+## Table of Contents
+* [Dependencies](https://github.com/jurayev/system-monitor#dependencies)
+* [Installation](https://github.com/jurayev/system-monitor#installation)
+* [Usage](https://github.com/jurayev/system-monitor#usage)
+* [Demo](https://github.com/jurayev/system-monitor#demo)
+* [Tests]()
+* [License](https://github.com/jurayev/system-monitor#license)
+
 ## Dependencies
 ### ncurses
 [ncurses](https://www.gnu.org/software/ncurses/) is a library that facilitates text-based graphical output in the terminal. This project relies on ncurses for display output.
@@ -14,7 +30,7 @@ This project uses [Make](https://www.gnu.org/software/make/). The Makefile has f
 * `debug` compiles the source code and generates an executable, including debugging symbols
 * `clean` deletes the `build/` directory, including all of the build artifacts
 
-## Instructions
+## Installation
 *Watch installation demo*
 
 [<img src="images/installation.png" width="75%" height="75%">](https://asciinema.org/a/OhiKb45LyXam00Es5sOLRSlXq "Watch installation demo")
@@ -25,8 +41,17 @@ This project uses [Make](https://www.gnu.org/software/make/). The Makefile has f
 
 3. Build the project: `make build`
 
-4. Run application: `./build/monitor`
+## Usage
+### Demo
+*Watch System Monitor demo*
+
+[<img src="images/installation.png" width="75%" height="75%">](https://asciinema.org/a/OhiKb45LyXam00Es5sOLRSlXq "Watch installation demo")
+
+### Execution
+1. Run application: `./build/monitor`
+
+2. Stop application by pressing: `ctrl + c`
 
 ## License
 
-MIT
+[MIT](https://github.com/jurayev/system-monitor/LICENCE.md)
