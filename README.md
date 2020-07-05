@@ -16,6 +16,8 @@ This project uses [Make](https://www.gnu.org/software/make/). The Makefile has f
 
 ## Instructions
 
+[![Installation demo](images/monitor.png)](https://asciinema.org/a/OhiKb45LyXam00Es5sOLRSlXq)
+
 1. Clone the project repository: `git clone https://github.com/jurayev/system-monitor.git`
 
 2. Go to project folder: `cd system-monitor`
