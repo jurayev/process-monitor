@@ -45,7 +45,7 @@ This project uses [Make](https://www.gnu.org/software/make/). The Makefile has f
 ### Demo
 *Watch System Monitor demo*
 
-[<img src="images/installation.png" width="75%" height="75%">](https://asciinema.org/a/OhiKb45LyXam00Es5sOLRSlXq "Watch installation demo")
+[<img src="images/system-monitor-u18-4cores.PNG" width="75%" height="75%">](https://github.com/jurayev/system-monitor/blob/master/images/sys-monitor-demo.mp4 "Watch System Monitor demo")
 
 ### Execution
 1. Run application: `./build/monitor`
