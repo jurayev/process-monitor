@@ -15,8 +15,9 @@ This project uses [Make](https://www.gnu.org/software/make/). The Makefile has f
 * `clean` deletes the `build/` directory, including all of the build artifacts
 
 ## Instructions
+*Watch installation demo*
 
-[![Installation demo](images/monitor.png)](https://asciinema.org/a/OhiKb45LyXam00Es5sOLRSlXq)
+[<img src="images/installation.png" width="75%" height="75%">](https://asciinema.org/a/OhiKb45LyXam00Es5sOLRSlXq "Watch installation demo")
 
 1. Clone the project repository: `git clone https://github.com/jurayev/system-monitor.git`
 
