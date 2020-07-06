@@ -27,17 +27,19 @@ Processes window displays the following info:
 
 *Ubuntu 18 with 4 CPU cores*
 
-<img src="images/system-monitor-u18-4cores.PNG" width="75%" height="75%">
+<img src="images/system-monitor-u18-4cores.PNG" width="100%" height="100%">
 
 *Ubuntu 16 with 2 CPU cores*
 
-<img src="images/system-monitor-u16-2cores.PNG" width="75%" height="75%">
+<img src="images/system-monitor-u16-2cores.PNG" width="100%" height="100%">
 
 ## Dependencies
 ### ncurses
 [ncurses](https://www.gnu.org/software/ncurses/) is a library that facilitates text-based graphical output in the terminal. This project relies on ncurses for display output.
 
-Install ncurses within your own Linux environment: `sudo apt install libncurses5-dev libncursesw5-dev`
+Install ncurses within your own Linux environment: 
+
+`sudo apt install libncurses5-dev libncursesw5-dev`
 
 ### Make
 This project uses [Make](https://www.gnu.org/software/make/). The Makefile has four targets:
@@ -48,18 +50,28 @@ This project uses [Make](https://www.gnu.org/software/make/). The Makefile has f
 
 ## Installation
 
-1. Clone the project repository: `git clone https://github.com/jurayev/system-monitor.git`
+1. Clone the project repository: 
 
-2. Go to project folder: `cd system-monitor`
+   `git clone https://github.com/jurayev/system-monitor.git`
 
-3. Build the project: `make build`
+2. Go to project folder: 
+
+   `cd system-monitor`
+
+3. Build the project: 
+
+   `make build`
 
 ## Usage
 
 ### Execution
-1. Run application: `./build/monitor`
+1. Run application: 
 
-2. Stop application: `ctrl + c`
+   `./build/monitor`
+
+2. Stop application: 
+
+   `ctrl + c`
 
 ## Roadmap
 
